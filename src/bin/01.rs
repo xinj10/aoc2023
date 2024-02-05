@@ -41,7 +41,7 @@ pub fn part_two(input: &str) -> Option<u32> {
             _ => sum += numbers[0] * 10 + numbers[numbers.len() - 1],
         }
     }
-    Some(sum)
+    None
 }
 
 fn parse_line(line: &str, number_table: &HashMap<&str, u32>) -> Vec<u32> {
@@ -74,7 +74,7 @@ mod tests {
     #[test]
     fn test_part_one() {
         let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(142));
     }
 
     #[test]
